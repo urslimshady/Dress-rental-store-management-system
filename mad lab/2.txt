@@ -154,16 +154,9 @@ txtResult.append("6");
  if (operands.length == 2) {
  Double operand1 = Double.parseDouble(operands[0]);
 Double operand2 = Double
-.parseDouble
-(operands
-[
-1]);
- Double result = operand1
-- operand2
-;
- txtResul
-t.setText(String
-.valueOf(result));
+.parseDouble(operands[1]);
+ Double result = operand1- operand2;
+ txtResult.setText(String.valueOf(result));
  } else
 
 {
@@ -174,27 +167,12 @@ t.setText(String
 }
  private void addition
 (String data) {
- String[] operands = data.split(Pattern
-.quote
-("+"));
- if
-(operands
-.length ==
-2) {
- Double operand1 = Double
-.parseDouble
-(operands
-[
-0]);
- Double operand2 = Double
-.parseDouble
-(operands
-[
-1]);
- Double result = operand1 + operand2
-;
- txtResult.setText(String
-.valueOf(result));
+ String[] operands = data.split(Pattern.quote("+"));
+ if(operands.length ==2) {
+ Double operand1 = Double.parseDouble(operands[0]);
+ Double operand2 = Double.parseDouble(operands[1]);
+ Double result = operand1 + operand2;
+ txtResult.setText(String.valueOf(result));
  } else
 
 {
@@ -205,28 +183,12 @@ t.setText(String
 }
  private void divide
 (String data) {
- String[] operands = data.split(
-"
-/
-");
- if
-(operands
-.length ==
-2) {
- Double operand1 = Double
-.parseDouble
-(operands
-[
-0]);
- Double operand2 = Double
-.parseDouble
-(operands
-[
-1]);
- Double result = operand1 / operand2
-;
- txtResult.setText(String
-.valueOf(result));
+ String[] operands = data.split("/");
+ if(operands.length ==2) {
+ Double operand1 = Double.parseDouble(operands[0]);
+ Double operand2 = Double.parseDouble(operands[1]);
+ Double result = operand1 / operand2;
+ txtResult.setText(String.valueOf(result));
  } else
 
 {
@@ -237,30 +199,13 @@ t.setText(String
 }
  private void multiplication
 (String data) {
- String[] operands = data.split(Pattern
-.quote
-("*"));
- if
-(operands
-.length ==
-2) {
- Double operand1 = Double
-.parseDouble
-(operands
-[
-0]);
- Double operand2 = Double
-.parseDouble
-(operands
-[
-1]);
- Double result = operand1 * operand2
-;
- txtResult.setText(String
-.valueOf(result));
- } else
-
-{
+ String[] operands = data.split(Pattern.quote("*"));
+ if(operands.length ==2) {
+ Double operand1 = Double.parseDouble(operands[0]);
+ Double operand2 = Double.parseDouble(operands[1]);
+ Double result = operand1 * operand2;
+ txtResult.setText(String.valueOf(result));
+ } else{
  displayInvalidMessage("invalid input");
 
 }
